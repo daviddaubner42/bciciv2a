@@ -38,12 +38,13 @@ This project uses the BCI Competition IV 2a dataset.
 
     * Sampling rate: 250 Hz.
 
-### Obtaining the data
+## Obtaining the data
 
-The dataset is not redistributed in this repository — it is subject to the competition's own terms of use. You must download it yourself from the BBCI site above and accept their data-use agreement.
+The dataset is **not redistributed in this repository** — it is subject to the competition's own terms of use. You must download it yourself from the [BBCI site](https://www.bbci.de/competition/iv/#download) and accept their data-use agreement.
 
 After downloading, extract the archive so that the GDF files sit in a directory named `BCICIV_2a_gdf/` at the repository root:
 
+```text
 BCICIV_2a_gdf/
 ├── A01T.gdf
 ├── A01E.gdf
@@ -52,8 +53,11 @@ BCICIV_2a_gdf/
 ├── ...
 ├── A09T.gdf
 └── A09E.gdf
+```
 
-### Repository structure
+## Repository structure
+
+```text
 .
 ├── preprocessing_evaluation.ipynb   # Main notebook: preprocessing, artifact correction, decoding
 ├── requirements.txt                 # Requirements file
@@ -72,6 +76,7 @@ BCICIV_2a_gdf/
     ├── A01_regr_raw.fif             # After EOG regression
     ├── A01_ica_raw.fif              # After ICA + find_bads_eog
     └── A01_iclabel_raw.fif          # After ICA + ICLabel
+```
 
 ### Requirements
 
@@ -111,6 +116,7 @@ jupyter notebook preprocessing_evaluation.ipynb
 | The notebook caches aggressively: if raw/A0X_raw.fif already exists it is loaded instead of re-parsing the GDF. Delete the relevant folder to force a rebuild.
 
 ### Outputs
+```text
 | Path | Contents |
 | `raw/A0X_raw.fif` | Raw GDF recording, cached as MNE Raw |
 | `eog_regression/A0X_regr_weights.pkl` | Fitted EOGRegression object (reusable on E sessions) |
@@ -119,6 +125,7 @@ jupyter notebook preprocessing_evaluation.ipynb
 | `ica/A0X_iclabel.fif` | ICA solution, ICLabel variant |
 | `preproc/A0X_ica_raw.fif` | Signal after CAR + ICA (EOG correlation) correction |
 | `preproc/A0X_iclabel_raw.fif` | Signal after CAR + ICA (ICLabel) correction
+```
 
 ### References
 
