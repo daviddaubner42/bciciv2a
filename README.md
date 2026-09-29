@@ -116,16 +116,15 @@ jupyter notebook preprocessing_evaluation.ipynb
 | The notebook caches aggressively: if raw/A0X_raw.fif already exists it is loaded instead of re-parsing the GDF. Delete the relevant folder to force a rebuild.
 
 ### Outputs
-```text
 | Path | Contents |
+|------|----------|
 | `raw/A0X_raw.fif` | Raw GDF recording, cached as MNE Raw |
 | `eog_regression/A0X_regr_weights.pkl` | Fitted EOGRegression object (reusable on E sessions) |
 | `preproc/A0X_regr_raw.fif` | Signal after CAR + EOG regression |
 | `ica/A0X_ica.fif` | ICA solution, find_bads_eog variant |
 | `ica/A0X_iclabel.fif` | ICA solution, ICLabel variant |
 | `preproc/A0X_ica_raw.fif` | Signal after CAR + ICA (EOG correlation) correction |
-| `preproc/A0X_iclabel_raw.fif` | Signal after CAR + ICA (ICLabel) correction
-```
+| `preproc/A0X_iclabel_raw.fif` | Signal after CAR + ICA (ICLabel) correction |
 
 ### References
 
