@@ -2,6 +2,8 @@
 
 A reproducible Python/MNE pipeline for preprocessing motor-imagery EEG and decoding imagined movements with Common Spatial Patterns (CSP) + Linear Discriminant Analysis (LDA).
 
+Everything lives in one notebook: [`preprocessing_evaluation.ipynb`](preprocessing_evaluation.ipynb).
+
 The main focus of this repository is a systematic comparison of blink-artifact correction strategies on the BCI Competition IV 2a dataset:
 
  1. EOG regression (subtractive, EOG-channel driven)
